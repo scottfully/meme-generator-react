@@ -17,16 +17,27 @@ main {
     display: flex;
     align-items: center;
     height: 65px;
-    color: white;
     padding: 20px;
 }
 
-.header > img {
+.header-link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: white;
+    height: 100%;
+}
+
+.header-link:hover {
+    opacity: 0.8;
+}
+
+.header-link > img {
     height: 100%;
     margin-right: 6px;
 }
 
-.header > h1 {
+.header-link > h1 {
     font-size: 1.25rem;
     margin-right: auto;
 }
