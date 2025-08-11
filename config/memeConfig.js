@@ -1,7 +1,16 @@
 export const DEFAULT_MEME = {
     topText: "One does not simply",
     bottomText: "Walk into Mordor",
-    imageUrl: "http://i.imgflip.com/1bij.jpg"
+    // imageUrl: "http://i.imgflip.com/1bij.jpg"
+    meme: {
+      "id":"61579",
+      "name":"One Does Not Simply",
+      "url":"https:\/\/i.imgflip.com\/1bij.jpg",
+      "width":568,
+      "height":335,
+      "box_count":2,
+      "captions":477750
+    }
 }
 
 export const API_CONFIG = {

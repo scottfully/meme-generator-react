@@ -13,13 +13,13 @@ export default function MemeDisplay({ meme, memeImageId }) {
         }, 200) 
         
         return () => clearTimeout(fallbackTimer)
-    }, [meme.imageUrl])
+    }, [meme.meme.url])
 
 
     return (
         <div className="meme" id={memeImageId}>
             <img 
-                src={meme.imageUrl} 
+                src={meme.meme.url} 
                 onLoad={() => setImageLoaded(true)}
                 onError={() => setImageLoaded(true)}
                 alt="Meme template"

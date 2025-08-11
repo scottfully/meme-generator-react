@@ -35,17 +35,20 @@ export default function MemeGenerator() {
     
     function getNewMemeImage() {
         const randomNumber = Math.floor(Math.random() * allMemes.length)
-        const newMemeUrl = allMemes[randomNumber].url
+        // const randomMeme = allMemes[randomNumber].url
+        const randomMeme = allMemes[randomNumber]
 
         setMeme({
             topText: "",
             bottomText: "",
-            imageUrl: newMemeUrl
+            // imageUrl: randomMeme,
+            meme: randomMeme
         })
     }
     
     function handleMemeChange(event) {
         const {value, name} = event.currentTarget
+
         setMeme(prevMeme => ({
             ...prevMeme,
             [name]: value
