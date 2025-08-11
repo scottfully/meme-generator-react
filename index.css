@@ -84,6 +84,9 @@ main {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    background: transparent;
+    margin: 0;
+    padding: 0;
 }
 
 .meme > img {

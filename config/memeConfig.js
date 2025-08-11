@@ -19,10 +19,13 @@ export const API_CONFIG = {
 
 export const DOWNLOAD_CONFIG = {
     defaultFilename: "meme",
-    fileFormat: "jpg",
+    fileFormat: "png",
     canvasOptions: {
         useCORS: true,
         allowTaint: true,
-        scale: 1
+        scale: 1,
+        backgroundColor: null,
+        logging: false,
+        removeContainer: true
     }
 }
