@@ -1,4 +1,4 @@
-export default function MemeForm({ meme, handleChange, getNewMemeImage }) {
+export default function MemeForm({ meme, handleMemeChange, getNewMemeImage }) {
     return (
         <div className="form">
             <label>Top Text
@@ -6,7 +6,7 @@ export default function MemeForm({ meme, handleChange, getNewMemeImage }) {
                     type="text"
                     placeholder=""
                     name="topText"
-                    onChange={handleChange}
+                    onChange={handleMemeChange}
                     value={meme.topText}
                 />
             </label>
@@ -16,7 +16,7 @@ export default function MemeForm({ meme, handleChange, getNewMemeImage }) {
                     type="text"
                     placeholder=""
                     name="bottomText"
-                    onChange={handleChange}
+                    onChange={handleMemeChange}
                     value={meme.bottomText}
                 />
             </label>

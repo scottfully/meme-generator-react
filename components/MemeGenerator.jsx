@@ -2,17 +2,14 @@ import { useState, useEffect } from "react"
 import MemeForm from "./MemeForm"
 import MemeDisplay from "./MemeDisplay"
 import DownloadButton from "./DownloadButton"
+import { DEFAULT_MEME, API_CONFIG, DOWNLOAD_CONFIG } from "../config/memeConfig"
 
 export default function MemeGenerator() {
-    const [meme, setMeme] = useState({
-        topText: "One does not simply",
-        bottomText: "Walk into Mordor",
-        imageUrl: "http://i.imgflip.com/1bij.jpg"
-    })
+    const [meme, setMeme] = useState(DEFAULT_MEME)
     const [allMemes, setAllMemes] = useState([])
     
     useEffect(() => {
-        fetch("https://api.imgflip.com/get_memes")
+        fetch(API_CONFIG.memeApiUrl)
             .then(res => res.json())
             .then(data => setAllMemes(data.data.memes))
     }, [])
@@ -21,14 +18,14 @@ export default function MemeGenerator() {
         const randomNumber = Math.floor(Math.random() * allMemes.length)
         const newMemeUrl = allMemes[randomNumber].url
 
-        setMeme(prevMeme => ({
+        setMeme({
             topText: "",
             bottomText: "",
             imageUrl: newMemeUrl
-        }))
+        })
     }
     
-    function handleChange(event) {
+    function handleMemeChange(event) {
         const {value, name} = event.currentTarget
         setMeme(prevMeme => ({
             ...prevMeme,
@@ -36,17 +33,28 @@ export default function MemeGenerator() {
         }))
     }
 
+    console.log("Rendering")
+
     return (
-        <>
+        <section 
+            className="meme-generator"
+            aria-label="Meme Generator"
+            role="application"
+        >
             <MemeForm 
                 meme={meme}
-                handleChange={handleChange}
+                handleMemeChange={handleMemeChange}
                 getNewMemeImage={getNewMemeImage}
             />
             
-            <MemeDisplay meme={meme} />
+            <MemeDisplay 
+                meme={meme} 
+                memeImageId={DOWNLOAD_CONFIG.memeImageId}
+            />
             
-            <DownloadButton />
-        </>
+            <DownloadButton 
+                memeImageId={DOWNLOAD_CONFIG.memeImageId}
+            />
+        </section>
     )
 }
