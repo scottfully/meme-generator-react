@@ -6,6 +6,13 @@
 [![Vite](https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white)](https://vitejs.dev/)
 [![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
 
+## 🌐 Live Demo
+
+**🚀 [Try the Meme Generator](https://meme-generator-react-dun.vercel.app)** - Create your own memes instantly!
+
+<a href="https://meme-generator-react-dun.vercel.app" target="_blank"><img src="https://img.shields.io/badge/🔗_Live_Demo-4285F4?style=for-the-badge&logo=googlechrome&logoColor=white" alt="Live Demo" /></a>
+  
+
 ## ✨ Features
 
 - 🖼️ **Random Meme Templates** - Access hundreds of popular meme templates from ImgFlip API
