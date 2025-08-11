@@ -89,7 +89,7 @@ main {
 .meme > img {
     max-width: 100%;
     height: auto;
-    border-radius: 3px;
+    /* border-radius: 3px; */
 }
 
 .meme span {
