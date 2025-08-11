@@ -139,9 +139,9 @@ The app uses modern CSS with:
 
 ## 🙏 Acknowledgments
 
-- Adapted from the example Scrimba React course.
-  + Added download button
+- Adapted from the example Scrimba React course
   + Refactored code to use components, config files, default memes and more...
+  + Added download button
 - Thanks to [ImgFlip](https://imgflip.com/) for providing the meme API
 - Inspired by the classic meme generator format
 
