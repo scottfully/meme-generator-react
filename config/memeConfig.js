@@ -2,7 +2,7 @@ export const DEFAULT_MEME = {
     topText: "One does not simply",
     bottomText: "Walk into Mordor",
     // imageUrl: "http://i.imgflip.com/1bij.jpg"
-    meme: {
+    data: {
       "id":"61579",
       "name":"One Does Not Simply",
       "url":"https:\/\/i.imgflip.com\/1bij.jpg",

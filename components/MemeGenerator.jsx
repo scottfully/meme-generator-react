@@ -39,10 +39,10 @@ export default function MemeGenerator() {
         const randomMeme = allMemes[randomNumber]
 
         setMeme({
-            topText: "",
+            topText: randomMeme.name,
             bottomText: "",
             // imageUrl: randomMeme,
-            meme: randomMeme
+            data: randomMeme
         })
     }
     

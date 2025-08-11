@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react'
 export default function MemeDisplay({ meme, memeImageId }) {
     const [imageLoaded, setImageLoaded] = useState(false)
 
-    // Reset loading state when image URL changes
+    // this will trigger each time the image url is changed
     useEffect(() => {
         setImageLoaded(false)
         
@@ -13,13 +13,15 @@ export default function MemeDisplay({ meme, memeImageId }) {
         }, 200) 
         
         return () => clearTimeout(fallbackTimer)
-    }, [meme.meme.url])
+    }, [meme.data.url])
 
 
     return (
         <div className="meme" id={memeImageId}>
             <img 
-                src={meme.meme.url} 
+                src={meme.data.url}
+                width={meme.data.width}
+                height={meme.data.height} 
                 onLoad={() => setImageLoaded(true)}
                 onError={() => setImageLoaded(true)}
                 alt="Meme template"
