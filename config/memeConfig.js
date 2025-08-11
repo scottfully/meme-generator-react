@@ -11,7 +11,6 @@ export const API_CONFIG = {
 export const DOWNLOAD_CONFIG = {
     defaultFilename: "meme",
     fileFormat: "jpg",
-    memeImageId: "memeToDownload",
     canvasOptions: {
         useCORS: true,
         allowTaint: true,

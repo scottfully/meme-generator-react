@@ -1,12 +1,14 @@
-import { useState, useEffect } from "react"
+import { useState, useEffect, useId } from "react"
 import MemeForm from "./MemeForm"
 import MemeDisplay from "./MemeDisplay"
 import DownloadButton from "./DownloadButton"
-import { DEFAULT_MEME, API_CONFIG, DOWNLOAD_CONFIG } from "../config/memeConfig"
+import { DEFAULT_MEME, API_CONFIG } from "../config/memeConfig"
 
 export default function MemeGenerator() {
     const [meme, setMeme] = useState(DEFAULT_MEME)
     const [allMemes, setAllMemes] = useState([])
+
+    const memeImageId = useId() + "-meme"
     
     useEffect(() => {
         fetch(API_CONFIG.memeApiUrl)
@@ -49,11 +51,11 @@ export default function MemeGenerator() {
             
             <MemeDisplay 
                 meme={meme} 
-                memeImageId={DOWNLOAD_CONFIG.memeImageId}
+                memeImageId={memeImageId}
             />
             
             <DownloadButton 
-                memeImageId={DOWNLOAD_CONFIG.memeImageId}
+                memeImageId={memeImageId}
             />
         </section>
     )
