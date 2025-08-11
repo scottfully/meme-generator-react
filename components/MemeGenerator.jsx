@@ -35,8 +35,6 @@ export default function MemeGenerator() {
         }))
     }
 
-    console.log("Rendering")
-
     return (
         <section 
             className="meme-generator"
