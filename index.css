@@ -74,6 +74,10 @@ main {
     font-family: "Karla", sans-serif;
 }
 
+.new-meme-button {
+    margin-bottom: 24px;
+}
+
 .download-button {
     margin-top: 17px;
 }
